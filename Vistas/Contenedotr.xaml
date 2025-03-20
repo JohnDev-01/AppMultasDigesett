@@ -6,5 +6,6 @@
            >
     <local:Multas Title="Multas" />
     <local:AcercaDe Title="Acerca de" />
+    <local:Seguridad Title="Seguridad" />
     
 </TabbedPage>

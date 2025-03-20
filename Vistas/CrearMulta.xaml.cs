@@ -109,6 +109,7 @@ public partial class CrearMulta : ContentPage
 
         await _db.SaveMultaAsync(multa);
         await DisplayAlert("Éxito", "Multa guardada correctamente", "OK");
+        await Navigation.PopAsync();
     }
 
 

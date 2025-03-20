@@ -73,6 +73,9 @@
 	  <MauiXaml Update="Vistas\CrearMulta.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Vistas\DetalleMulta.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Vistas\Multas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

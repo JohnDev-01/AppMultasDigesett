@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMultasDigesett.Vistas.CrearMulta"
+             Title="Crear Multa">
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="15">
+            <!-- Código de Marbete -->
+            <Frame Padding="10"
+                   CornerRadius="10"
+                   HasShadow="True">
+                <Entry x:Name="CodigoEntry"
+                       Placeholder="Código de Marbete"
+                       Completed="OnCodigoEntered"
+                       TextChanged="CodigoEntry_TextChanged"/>
+            </Frame>
+            <!-- Datos del Vehículo -->
+            <Frame Padding="10"
+                   CornerRadius="10"
+                   HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Entry x:Name="MarcaEntry"
+                           Placeholder="Marca"
+                           IsReadOnly="True" />
+                    <Entry x:Name="ModeloEntry"
+                           Placeholder="Modelo"
+                           IsReadOnly="True" />
+                    <Entry x:Name="ColorEntry"
+                           Placeholder="Color"
+                           IsReadOnly="True" />
+                    <Entry x:Name="AnioEntry"
+                           Placeholder="Año"
+                           IsReadOnly="True" />
+                    <Entry x:Name="PlacaEntry"
+                           Placeholder="Placa"
+                           IsReadOnly="True" />
+                </VerticalStackLayout>
+            </Frame>
+            <!-- Tipo de Infracción -->
+            <Frame Padding="10"
+                   CornerRadius="10"
+                   HasShadow="True">
+                <Picker x:Name="TipoInfraccionPicker"
+                        Title="Tipo de Infracción" />
+            </Frame>
+            <!-- Fecha y Hora -->
+            <HorizontalStackLayout Spacing="10">
+                <Frame Padding="10"
+                       CornerRadius="10"
+                       HasShadow="True">
+                    <DatePicker x:Name="FechaPicker" />
+                </Frame>
+                <Frame Padding="10"
+                       CornerRadius="10"
+                       HasShadow="True">
+                    <TimePicker x:Name="HoraPicker" />
+                </Frame>
+            </HorizontalStackLayout>
+            <!-- Descripción -->
+            <Frame Padding="10"
+                   CornerRadius="10"
+                   HasShadow="True">
+                <Editor x:Name="DescripcionEditor"
+                        Placeholder="Descripción de la multa"
+                        AutoSize="TextChanges"
+                        HeightRequest="100" />
+            </Frame>
+            <!-- Botones de Acción -->
+            <VerticalStackLayout Spacing="10">
+                <Button Text="📸 Tomar Foto"
+                        Clicked="OnTomarFotoClicked"
+                        BackgroundColor="#3498db"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10" />
+                <Button Text="🎤 Grabar Audio"
+                        Clicked="OnGrabarAudioClicked"
+                        BackgroundColor="#e67e22"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10" 
+                        x:Name="btnGrabar"/>
+                <Button Text="💾 Guardar Multa"
+                        Clicked="OnGuardarClicked"
+                        BackgroundColor="#2ecc71"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

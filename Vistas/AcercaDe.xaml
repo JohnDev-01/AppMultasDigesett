@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMultasDigesett.Vistas.AcercaDe"
+             Title="Acerca De">
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="20"
+                             HorizontalOptions="Center">
+            <!-- Foto del agente -->
+            <Frame Padding="5"
+                   CornerRadius="100"
+                   WidthRequest="140"
+                   HeightRequest="140"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   BorderColor="LightGray">
+                <Image x:Name="AgenteFoto"
+                       HeightRequest="150"
+                       WidthRequest="150"
+                       Aspect="AspectFill"
+                        />
+            </Frame>
+            <!-- Información del agente -->
+            <Frame Padding="15"
+                   CornerRadius="12"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   BorderColor="LightGray"
+                   WidthRequest="300">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="👮‍♂️ Agente de Tránsito"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="#007AFF" />
+                    <Label Text="Nombre: "
+                           FontAttributes="Bold"
+                           FontSize="16" />
+                    <Label x:Name="NombreLabel"
+                           FontSize="16"
+                           TextColor="#333" />
+                    <Label Text="Matrícula: "
+                           FontAttributes="Bold"
+                           FontSize="16" />
+                    <Label x:Name="MatriculaLabel"
+                           FontSize="16"
+                           TextColor="#333" />
+                </VerticalStackLayout>
+            </Frame>
+            <!-- Frase motivadora -->
+            <Frame Padding="15"
+                   CornerRadius="12"
+                   BackgroundColor="#E3F2FD"
+                   HasShadow="True"
+                   BorderColor="LightGray"
+                   WidthRequest="300">
+                <Label x:Name="FraseLabel"
+                       Text="🚸 La seguridad vial no es solo una responsabilidad, es un compromiso con la vida."
+                       FontSize="16"
+                       FontAttributes="Italic"
+                       TextColor="#007AFF"
+                       HorizontalTextAlignment="Center" />
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

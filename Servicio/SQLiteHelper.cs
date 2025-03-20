@@ -28,5 +28,9 @@ namespace AppMultasDigesett.Servicio
         {
             return _database.Table<Multa>().ToListAsync();
         }
+        public Task<int> DeleteAllMultasAsync()
+        {
+            return _database.DeleteAllAsync<Multa>();
+        }
     }
 }

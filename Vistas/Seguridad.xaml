@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMultasDigesett.Vistas.Seguridad"
+             Title="Seguridad">
+    <VerticalStackLayout Padding="20"
+                         Spacing="25"
+                         HorizontalOptions="Center">
+        <!-- Advertencia -->
+        <Frame Padding="15"
+               CornerRadius="12"
+               BackgroundColor="#FFCDD2"
+               BorderColor="#D32F2F"
+               HasShadow="True"
+               WidthRequest="320">
+            <Label Text="🛑 ATENCIÓN: Esta acción eliminará permanentemente TODAS las multas registradas en el dispositivo."
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="#D32F2F"
+                   HorizontalTextAlignment="Center" />
+        </Frame>
+        <!-- Explicación -->
+        <Frame Padding="15"
+               CornerRadius="12"
+               BackgroundColor="White"
+               BorderColor="LightGray"
+               HasShadow="True"
+               WidthRequest="320">
+            <Label Text="⚠️ El botón de 'Borrar Todo' está diseñado para ser utilizado al final de la jornada laboral. 
+                         Esta acción no se puede deshacer."
+                   FontSize="14"
+                   TextColor="#333"
+                   HorizontalTextAlignment="Center" />
+        </Frame>
+        <!-- Botón para borrar todo -->
+        <Button Text="❌ BORRAR TODO"
+                BackgroundColor="#D32F2F"
+                TextColor="White"
+                FontSize="18"
+                HeightRequest="50"
+                CornerRadius="10"
+                Clicked="OnBorrarTodoClicked" />
+    </VerticalStackLayout>
+</ContentPage>

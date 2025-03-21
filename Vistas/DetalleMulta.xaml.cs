@@ -22,7 +22,7 @@ public partial class DetalleMulta : ContentPage
         // Mostrar la foto si existe
         if (!string.IsNullOrEmpty(multa.FotoPath) && File.Exists(multa.FotoPath))
         {
-            FotoImage.Source = ImageSource.FromFile(multa.FotoPath);
+            FotoImage.Source = multa.FotoPath;
         }
         else
         {
@@ -35,7 +35,7 @@ public partial class DetalleMulta : ContentPage
             _audioPlayer = AudioManager.Current.CreatePlayer(_rutaAudio);
         }
     }
-
+    
     private void OnPlayAudioClicked(object sender, EventArgs e)
     {
         if (_audioPlayer != null)

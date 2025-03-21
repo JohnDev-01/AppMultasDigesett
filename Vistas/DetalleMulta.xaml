@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMultasDigesett.Vistas.DetalleMulta"
-             Title="Detalle Multa">
+             Title="">
     <ScrollView>
         <VerticalStackLayout Padding="20"
                              Spacing="15">
@@ -58,18 +58,11 @@
                 </Grid>
             </Frame>
             <!-- Imagen del vehículo o infracción -->
-            <Frame Padding="5"
-                   CornerRadius="12"
-                   BackgroundColor="White"
-                   HasShadow="True"
-                   BorderColor="LightGray"
-                   IsVisible="False"
-                   x:Name="FotoFrame">
+           
                 <Image x:Name="FotoImage"
                        HeightRequest="250"
-                       Aspect="AspectFill"
                        HorizontalOptions="Center" />
-            </Frame>
+           
             <!-- Botón para reproducir audio -->
             <Button Text="🎵 Reproducir Audio"
                     BackgroundColor="Green"
